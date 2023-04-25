@@ -1,0 +1,44 @@
+.checkbox{
+    display: inline-flex;
+    margin-right: 20px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.checkbox__input{
+    display: none;
+}
+
+.checkbox__visible{
+    width: 1.25em;
+    height: 1.25em;
+    border:1px solid #d8e4e2;
+    box-sizing: border-box;
+    margin: 2px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 10px;
+    flex-shrink: 0;
+
+    transition: background-color 0.2s, border-color 0.2s;
+}
+
+.checkbox__visible::after{
+    /* To create a check mark without icon lib */
+    content:'\2714'; 
+    color:#FFF;
+
+    transform:scale(0);
+    transition:transform 0.2s;
+}
+
+.checkbox__input:checked + .checkbox__visible{
+    background-color: #000;
+    border-color: #000;
+}
+
+.checkbox__input:checked + .checkbox__visible::after{
+    transform:scale(1);
+}
