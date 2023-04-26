@@ -1,0 +1,44 @@
+.toggle{
+    --width:40px;
+    --height:calc(var(--width)/2);
+    --border-radius:calc(var(--height)/2);
+
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.toggle__input{
+    display: none;
+}
+
+.toggle__visible{
+    position: relative;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--border-radius);
+    background-color: #d8e4e2;
+    margin: 2px;
+
+    transition: background-color 0.2s;
+}
+
+.toggle__visible::after{
+    content:"";
+    position: absolute;
+    margin:2px;
+    width:calc(var(--height) - 4px);
+    height:calc(var(--height) - 4px);
+    border-radius: 50%;
+    background-color: #FFF;
+
+    transition: transform 0.2s;
+}
+
+.toggle__input:checked + .toggle__visible{
+    background-color: #000;
+}
+
+.toggle__input:checked + .toggle__visible::after{
+    transform: translateX(var(--height));
+}

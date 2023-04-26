@@ -7,6 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/radio.css">
     <link rel="stylesheet" href="./css/checkbox.css">
+    <link rel="stylesheet" href="./css/toggle.css">
+    <link rel="stylesheet" href="./css/dropdown.css">
     <title>Custom HTML Inputs</title>
 </head>
 
@@ -39,6 +41,27 @@
             <div class="checkbox__visible"></div>
             Option 2
         </label>
+    </div>
+
+    <!-- Toggle Switch -->
+    <h4>Custom Toggle Switch</h4>
+    <div>
+        <label for="toggleId1" class="toggle">
+            <input type="checkbox" name="toggleField1" id="toggleId1" class="toggle__input">
+            <div class="toggle__visible"></div>
+            Dark Mode
+        </label>
+    </div>
+
+    <!-- Dropdown -->
+    <h4>Custom Dropdown</h4>
+    <div>
+        <select class="select">
+            <option disabled selected>Select Fruit</option>
+            <option value="apples">Apples</option>
+            <option value="bananas">Bananas</option>
+            <option value="guava">Guava</option>
+        </select>
     </div>
 </body>
 
